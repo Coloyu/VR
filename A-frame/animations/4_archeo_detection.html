@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@5.0.0/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-proxemic-component@0.0.17/dist/aframe-proxemic-component.min.js"></script>
+
+  </head>
+
+  <body>
+    <a-scene>
+      <a-sky color="tomato"></a-sky>
+
+      <a-plane position="0 0 0" rotation="-90 0 0" width="3" height="3" color="#3D84DB"></a-plane>
+      <a-camera position="0 0.5 3";> </a-camera>
+
+        <a-box
+          proximity-sensor="distance:1"
+          position="0 -0.26 0"
+          scale="0.5 0.5 0.5"
+          color="yellow"
+          event-set__proximityenter="position: 0 0.25 0;"
+          >
+      </a-box>
+
+
+
+      <a-box proximity-sensor="distance:0.5"
+          width="0.5" height="0.5" depth="0.5" side="both" color="red"
+          position="0 1.6 -4" rotation="45 45 45"
+          animation="property:position; from: 0 1.6 -4; to: 0 1.6 -0.5; dur: 3000; dir: alternate; loop: true"
+          event-set__proximityenter="material.color:blue"
+          event-set__proximityexit="material.color: red">
+      </a-box>
+
+
+
+    </a-scene>
+  </body>
+</html>

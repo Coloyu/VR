@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+  </head>
+  <body>
+    <a-scene>
+      <a-sky color="black"></a-sky>
+
+      <a-box
+        position="-1 0.5 -3"
+        rotation="0 45 0"
+        color="#D0B8F0"
+        animation__position= "property: position; to: 1 2 -5; dur: 2000; loop : true; easing: easeInQuad;"
+        animation__rotation= "property: rotation; to: 50 90 180; dur: 2000; loop: true;"
+        animation__color="property: color; from: #DDC2E7; to: #402D61; dur: 2000; loop: true; dir: alternate"
+        >
+    </a-box>
+
+
+      <a-box
+        position="3 2 -5"
+        animation="property: rotation; to: 0 360 180; dur: 5000; loop: true;"
+      >
+      </a-box>
+
+    </a-scene>
+  </body>
+</html>

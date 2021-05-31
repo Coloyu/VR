@@ -1,0 +1,21 @@
+<html>
+
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+
+  <body>
+    <a-scene background="color: tomato">
+
+        <a-assets>
+          <a-asset-item id="suzanne" src="suzanne.glb"></a-asset-item>
+          <a-asset-item id="dragon" src="alduin-dragon.glb"></a-asset-item>
+        </a-assets>
+
+        <a-entity gltf-model="#suzanne" position="0 1.6 -5"> </a-entity>
+        <a-entity gltf-model="#dragon" position="0 5 -3" scale="0.01 0.01 0.01" rotation="0 -90 0"> </a-entity>
+
+    </a-scene>
+  </body>
+
+</html>
