@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script>
+      AFRAME.registerComponent('log', {
+        schema: {
+          message: {type: 'string', default: 'Hello, world!'}
+        },
+
+        init: function () {
+          var el = this.el;
+          var message = this.data.message;
+          console.log(message);
+
+        },
+
+      });
+    </script>
+
+
+
+  </head>
+  <body>
+    <a-scene>
+      <a-box log="message: carré" position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <a-sphere log position="0 1.25 -5" radius="1.25" color="tomato"></a-sphere>
+      <a-cylinder log position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+      <a-plane log position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#111111"></a-plane>
+      <a-sky color="black"></a-sky>
+    </a-scene>
+  </body>
+</html>
